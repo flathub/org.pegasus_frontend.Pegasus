@@ -28,4 +28,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/mmatyas/pegasus-frontend.git
-        tag: weekly_2021w05
+        branch: release_alpha15
