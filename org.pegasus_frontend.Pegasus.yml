@@ -25,7 +25,12 @@ modules:
       - INSTALL_ICONDIR=/app/share/icons/hicolor
       - INSTALL_DESKTOPDIR=/app/share/applications
       - INSTALL_APPSTREAMDIR=/app/share/metainfo
+    post-install:
+      - |
+        last_version=$(grep -oPm1 '(?<=version=").*(?=" />)' /app/share/metainfo/org.pegasus_frontend.Pegasus.metainfo.xml)
+        sed -i "s|<releases>|<releases>\n    <release date=\"$(git log -1 --format=%ci | awk '{print $1}')\" version=\"$last_version $(git rev-parse --short HEAD)\" \/>|" \
+        /app/share/metainfo/org.pegasus_frontend.Pegasus.metainfo.xml
     sources:
       - type: git
         url: https://github.com/mmatyas/pegasus-frontend.git
-        branch: release_alpha15
+        commit: 29ca7047018a2f45b42743b1facdaf21ab537e08
