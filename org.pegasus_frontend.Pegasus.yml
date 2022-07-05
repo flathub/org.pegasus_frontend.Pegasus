@@ -33,4 +33,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/mmatyas/pegasus-frontend.git
-        commit: cf2e2d1c5de43de86c4ab41a84e27c2804fed427
+        commit: d4690c661c02bfb0f819318d4c406d5600cc3a7b
