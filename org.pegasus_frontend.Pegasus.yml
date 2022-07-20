@@ -1,6 +1,6 @@
 app-id: org.pegasus_frontend.Pegasus
 runtime: org.kde.Platform
-runtime-version: '5.15-21.08'
+runtime-version: 5.15-21.08
 sdk: org.kde.Sdk
 command: pegasus-fe
 finish-args:
@@ -34,3 +34,8 @@ modules:
       - type: git
         url: https://github.com/mmatyas/pegasus-frontend.git
         commit: 7fcdafa7585607b33690dce873ba12e06d35a112
+        branch: master
+
+# The below comment makes flathub-external-data-checker run,
+# see the related grep command at https://github.com/flathub/actions/blob/master/flathub-external-data-checker/entrypoint.sh
+# x-data-checker
