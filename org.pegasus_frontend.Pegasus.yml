@@ -33,7 +33,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/mmatyas/pegasus-frontend.git
-        commit: 6421d7a75d29a82ea06008e4a08ec14e074430d9
+        commit: de324bb566942173f4cd6d48bd627847ee324e97
         branch: master
 
 # The below comment makes flathub-external-data-checker run,
